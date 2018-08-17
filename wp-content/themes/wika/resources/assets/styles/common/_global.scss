@@ -1,0 +1,159 @@
+
+@font-face {
+  font-family: 'libre_franklinlight';
+  src:
+    url('../fonts/Libre_Franklin-Light.woff2') format('woff2'),
+    url('../fonts/Libre_Franklin-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'vigaregular';
+  src:
+    url('../fonts/Viga-Regular.woff2') format('woff2'),
+    url('../fonts/Viga-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ubuntubold';
+  src:
+    url('../fonts/Ubuntu-Bold.woff2') format('woff2'),
+    url('../fonts/Ubuntu-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ubuntumedium';
+  src:
+    url('../fonts/Ubuntu-Medium.woff2') format('woff2'),
+    url('../fonts/Ubuntu-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ubunturegular';
+  src:
+    url('../fonts/Ubuntu-Regular.woff2') format('woff2'),
+    url('../fonts/Ubuntu-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ubuntulight';
+  src:
+    url('../fonts/Ubuntu-Light.woff2') format('woff2'),
+    url('../fonts/Ubuntu-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  @include font-family();
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include font-family('ubuntu', 'medium');
+}
+
+.updated {
+  font-size: 12px;
+}
+
+a {
+  transition: color 0.3s ease;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.widgetTitle {
+  font-size: 18px;
+}
+
+.fancy-link-center {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  overflow: hidden;
+  margin: 0.4em;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: #515151;
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: $primary;
+    height: 2px;
+    transition-property: left, right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  &:hover {
+    color: $primary;
+
+    &::before {
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+.btn {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.btn:not(.btn-link) {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.btn-link {
+  font-weight: 700;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.section {
+  padding: 3rem 0 1.85rem;
+}
+
+.nav {
+  .withIcon {
+    &.leftIcon {
+      svg {
+        margin-right: 0.45rem;
+      }
+    }
+
+    &.rightIcon {
+      svg {
+        margin-left: 0.45rem;
+      }
+    }
+  }
+}

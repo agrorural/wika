@@ -1,0 +1,872 @@
+# Translation of BasePress
+# This file is distributed under the same license as the plugin package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: admin-settings.php
+msgid "Settings"
+msgstr "Opzioni"
+
+#: admin-settings.php
+msgid "Save Settings"
+msgstr "Salva Opzioni"
+
+#: General Settings admin-settings.php
+msgid "General"
+msgstr "Generale"
+
+#: admin-settings.php
+msgid "Knowledge Base page"
+msgstr "Pagina Knowledge Base"
+
+#: admin-settings.php
+msgid "Select page"
+msgstr "Seleziona Pagina"
+
+#: admin-settings.php
+msgid "Select the page containing the knowledge base shortcode."
+msgstr "Seleziona la pagina che contiene lo shortcode per il knowledge Base."
+
+#: admin-settings.php
+msgid "Breadcrumbs name"
+msgstr "Nome breadcrumbs"
+
+#: admin-settings.php
+msgid "This is the name used in the breadcrumbs for the knowledge base entry page."
+msgstr "Questo è il nome usato nei breadcrumbs per la pagina iniziale del knowledge base."
+
+#: admin-settings.php
+msgid "Exclude IPs from post view counter"
+msgstr "IP da excludere dal conteggio visite articoli"
+
+#: admin-settings.php
+msgid "Add multiple IP addresses separated by a space."
+msgstr "Aggiungi indirizzi IP multipli separati da uno spazio."
+
+#: admin-settings.php
+msgid "Single product mode"
+msgstr "Modalità singolo prodotto"
+
+#: admin-settings.php
+msgid "Remove all content on unistall"
+msgstr "Rimuovi tutti i contenuti durante la disinstallazione"
+
+#: Aspect Settings admin-settings.php
+msgid "Aspect"
+msgstr "Aspetto"
+
+#: admin-settings.php
+msgid "Theme"
+msgstr "Tema"
+
+#: admin-settings.php
+msgid "Select Theme"
+msgstr "Seleziona Tema"
+
+#: admin-settings.php
+msgid "Products Columns"
+msgstr "Colonne prodotti"
+
+#: admin-settings.php
+msgid "Sections Columns"
+msgstr "Colonne sezioni"
+
+#: admin-settings.php
+msgid "Limit Post Count on multi sections page"
+msgstr "Limita numero articoli (Sezioni multiple)"
+
+#: admin-settings.php
+msgid "Limit Post Count on single section page"
+msgstr "Limita numero articoli (Sezione singola)"
+
+#: admin-settings.php
+msgid "Show Section Icons"
+msgstr "Mostra icone sezioni"
+
+#: admin-settings.php
+msgid "Show Post Icons"
+msgstr "Mostra icone articoli"
+
+#: admin-settings.php
+msgid "Show post count on Sections"
+msgstr "Mostra numero articoli nella sezione"
+
+#: Search Settings admin-settings.php
+msgid "Search"
+msgstr "Ricerca"
+
+#: admin-settings.php
+msgid "Use smart search suggestions"
+msgstr "Usa smart search"
+
+#: admin-settings.php
+msgid "Disable on touch devises smaller than"
+msgstr "Disabilita su touch device più piccoli di"
+
+#: admin-settings.php
+msgid "Insert the minimum screen <u>height</u> in px."
+msgstr "Inserire <u>l’altezza</u> minima dello schermo in px."
+
+#: admin-settings.php
+msgid "Limit smart search suggestions"
+msgstr "Limita suggerimenti smart search"
+
+#: admin-settings.php
+msgid "Search field placeholder"
+msgstr "Segnaposto campo ricerca"
+
+#: admin-settings.php
+msgid "Submit button text"
+msgstr "Testo pulsante ricerca"
+
+#: admin-settings.php
+msgid "Show search submit button"
+msgstr "Mostra pulsante ricerca"
+
+#: admin-settings.php
+msgid "Search result page title"
+msgstr "Titolo pagina risultati della ricerca"
+
+#: admin-settings.php
+msgid "This is the title for the search page. Use %number% to include the number of found posts in the text."
+msgstr "Questo è il titolo della pagina di ricerca. Usa %number% per includere il numero di articoli trovati nel testo."
+
+#: admin-settings.php
+msgid "'No search result found' page title"
+msgstr "Titolo pagina 'Nessun risultato trovato'"
+
+#: admin-settings.php
+msgid "This is the title for the search page when no results are found."
+msgstr "Titolo pagina di ricerca con nessun articolo trovato."
+
+#: admin-settings.php
+msgid "Show all results text"
+msgstr "Testo per Mostra tutti i risultati"
+
+#: admin-settings.php
+msgid "This text appears at the bottom of the search bar suggestions."
+msgstr "Questo testo appare in fondo ai suggerimenti di ricerca."
+
+#: admin-settings.php
+msgid "Load css on shortcode"
+msgstr "Carica css per shortcode"
+
+#: Votes Settings admin-settings.php
+msgid "Votes"
+msgstr "Voti"
+
+#: admin-settings.php
+msgid "Activate article votes"
+msgstr "Attiva voto articoli"
+
+#: admin-settings.php
+msgid "Voting Question"
+msgstr "Domanda per votazioni"
+
+#: admin-settings.php
+msgid "Hide dislike button"
+msgstr "Nascondi pulsante dislike"
+
+#: admin-settings.php
+msgid "Show votes count"
+msgstr "Mostra conteggio voti"
+
+#: admin-settings.php
+msgid "Votes icons"
+msgstr "Icone votazioni"
+
+#: Table of Contents Settings admin-settings.php
+msgid "Table of Contents"
+msgstr "Indice contenuti"
+
+#: admin-settings.php
+msgid "Show Table of Content on articles"
+msgstr "Mostra indice"
+
+#: admin-settings.php
+msgid "Table of Content title"
+msgstr "Titlo dell’indice"
+
+#: admin-settings.php
+msgid "This title applies to the Table of Content in articles body. The widget has its own title."
+msgstr "Questo titole è applicato all’indice nel corpo dell’articolo. Il widget usa il suo titolo."
+
+#: admin-settings.php
+msgid "Show numbers on list items"
+msgstr "Mostra numeri negli elementi della lista"
+
+#: admin-settings.php
+msgid "This option applies to the widget as well."
+msgstr "Questa opzione è applicata anche al widget."
+
+#: admin-settings.php
+msgid "Show Back to top link"
+msgstr "Mostra link ‘Torna su’"
+
+#: admin-settings.php
+msgid "Shows a link to go back to the top of the page."
+msgstr "Mostra un link per tornare a inizio pagina."
+
+#: admin-settings.php
+msgid "Back to top link text"
+msgstr "Testo per link ’Torna su’"
+
+#: Article Navigation admin-settings.php
+msgid "Articles Navigation"
+msgstr "Navigazione Articoli"
+
+#: admin-settings.php
+msgid "Show adjacent articles"
+msgstr "Mostra articoli adiacenti"
+
+#: admin-settings.php
+msgid "Shows Previous and Next articles link."
+msgstr "Mostra link per articolo precedente e successivo."
+
+#: admin-settings.php
+msgid "Previous article title"
+msgstr "Titolo per articolo precedente"
+
+#: admin-settings.php
+msgid "Next article title"
+msgstr "Titole per articolo successivo"
+
+#: Comments admin-settings.php
+msgid "Comments"
+msgstr "Commenti"
+
+msgid "Enable Comments"
+msgstr "Abilita i commenti"
+
+#: admin-settings.php
+msgid "Use main theme template"
+msgstr "Usa il template del tema principale"
+
+#: Content Restriction admin-settings.php
+msgid "Content Restriction"
+msgstr "Blocco Contenuti"
+
+#: admin-settings.php
+msgid "Activate content restriction"
+msgstr "Attivare blocco contenuti"
+
+#: admin-settings.php
+msgid "Restricted page notice"
+msgstr "Avviso contenuto bloccato"
+
+#: admin-settings.php
+msgid "Show teaser"
+msgstr "Mostra teaser"
+
+#: admin-settings.php
+msgid "Teaser length in characters"
+msgstr "Lunghezza teaser in caratteri"
+
+#: admin-settings.php
+msgid "Show Login form"
+msgstr "Mostra form Login"
+
+#: basepress-content-restriction.php
+msgid "Visible to:"
+msgstr "Visibile a:"
+
+#: Delete Data on Multisite admin-settings.php
+msgid "Delete Data"
+msgstr "Cancella Dati"
+
+#: admin-settings.php
+msgid "Delete all data"
+msgstr "Cancella tutti i dati"
+
+#: admin-settings.php
+msgid "ATTENTION! This action cannot be undone."
+msgstr "ATTENZIONE! Questa azione non può essere annullata."
+
+#: Multisite settings admin-network.php
+msgid "Delete Content from site(s)"
+msgstr "Cancella il contenuto dai siti"
+
+#: admin-network.php
+msgid "Submit"
+msgstr "Invia"
+
+#: Knowledge base Post Type basepress-cpt.php
+msgid "All Products"
+msgstr "Tutti i Prodotti"
+
+#: basepress-cpt.php
+msgid "View Product"
+msgstr "Mostra Prodotto"
+
+#: basepress-cpt.php
+msgid "Update Product"
+msgstr "Aggiorna Prodotto"
+
+#: basepress-cpt.php
+msgid "New Product Name"
+msgstr "Nome Nuovo Prodotto"
+
+#: basepress-cpt.php
+msgid "Parent Product"
+msgstr "Prodotto padre"
+
+#: basepress-cpt.php
+msgid "Search Products"
+msgstr "Cerca Prodotti"
+
+#: basepress-cpt.php
+msgid "Knowledge Base"
+msgstr "Knowledge Base"
+
+#: basepress-cpt.php
+msgid "Knowledge Base Post"
+msgstr "Articolo Knowledge Base"
+
+#: basepress-cpt.php
+msgid "All Posts"
+msgstr "Tutti gli articoli"
+
+#: basepress-cpt.php
+msgid "These are the Knowledge base articles from BasePress."
+msgstr "Questi sono gli articoli del Knowledge Base di BasePress."
+
+#: basepress-cpt.php
+msgid "Show all products"
+msgstr "Mostra tutti i prodotti"
+
+#: Post Views columns and bulk actions basepress-post-views.php
+msgid "Views"
+msgstr "Visite"
+
+#: basepress-post-views.php
+msgid "Reset Views (Selected)"
+msgstr "Azzera Visite (Selezionati)"
+
+#: basepress-post-views.php
+msgid "Reset Views (All)"
+msgstr "Azzera Visite (Tutti)"
+
+#: Post Votes and score columns bulk actions basepress-votes.php
+msgid "Score %"
+msgstr "Punti %"
+
+#: basepress-votes.php
+msgid "Reset Votes (Selected)"
+msgstr "Azzera Voti (Selezionati)"
+
+#: basepress-votes.php
+msgid "Reset Votes (All)"
+msgstr "Azzera Voti (Tutti)"
+
+#: Post Metaboxes basepress_product_metabox.php
+msgid "Product"
+msgstr "Prodotto"
+
+#: basepress_section_metabox.php
+msgid "Section"
+msgstr "Sezione"
+
+#: basepress_template_metabox.php
+msgid "Template"
+msgstr "Template"
+
+#: Post Order Page post-order-page.php
+msgid "Post Order"
+msgstr "Ordine articoli"
+
+#: post-order-page.php
+msgid "Knowledge Base Post order"
+msgstr "Ordine articoli"
+
+#: post-order-page.php
+msgid "Select Product"
+msgstr "Seleziona Prodotto"
+
+#: post-order-page.php
+msgid "Select Section"
+msgstr "Seleziona Sezione"
+
+#: post-order-page.php
+msgid "Save Order"
+msgstr "Salva ordine"
+
+#: post-order-page.php
+msgid "Title"
+msgstr "Titolo"
+
+#: post-order-page.php
+msgid "Author"
+msgstr "Autore"
+
+#: post-order-page.php
+msgid "Score"
+msgstr "Punti"
+
+#: post-order-page.php
+msgid "Date"
+msgstr "Data"
+
+#: products-page.php
+msgid "knowledge Base Products"
+msgstr "Prodotti Knowledge Base"
+
+#: products-page.php
+msgid "Products"
+msgstr "Prodotti"
+
+#: products-page.php
+msgid "Add New Product"
+msgstr "Aggiungi Prodotto"
+
+#: products-page.php
+msgid "Name"
+msgstr "Nome"
+
+#: products-page.php
+msgid "The name is how it appears on your site."
+msgstr "Il nome è come apparirà nel tuo sito."
+
+#: products-page.php
+msgid "Description"
+msgstr "Descrizione"
+
+#: products-page.php
+msgid "Product image"
+msgstr "Immagine Prodotto"
+
+#: products-page.php
+msgid "Choose an image for this product."
+msgstr "Scegli un’immagine per questo prodotto."
+
+#: products-page.php
+msgid "Select image"
+msgstr "Selezione Immagine"
+
+#: products-page.php
+msgid "Remove image"
+msgstr "Rimuovi Immagine"
+
+#: products-page.php
+msgid "Sections style"
+msgstr "Stile sezioni"
+
+#: products-page.php
+msgid "Sub-Sections style"
+msgstr "Stile sotto sezioni"
+
+#: products-page.php
+msgid "List"
+msgstr "Lista"
+
+#: products-page.php
+msgid "Boxed"
+msgstr "Boxed"
+
+#: products-page.php
+msgid "Image"
+msgstr "Immagine"
+
+#: products-page.php
+msgid "Slug"
+msgstr "Slug"
+
+#: products-page.php
+msgid "Count"
+msgstr "Cont."
+
+#: products-page.php
+msgid "Edit Product"
+msgstr "Modifica Prodotto"
+
+#: products-page.php
+msgid "Save changes"
+msgstr "Salva Modifiche"
+
+#: products-page.php
+msgid "Cancel"
+msgstr "Annulla"
+
+#: Sections Page sections-page.php
+msgid "Sections"
+msgstr "Sezioni"
+
+#: sections-page.php
+msgid "Knowledge Base Sections"
+msgstr "Sezioni Knowledge Base"
+
+#: sections-page.php
+msgid "Add New Section"
+msgstr "Aggiungi Sezione"
+
+#: sections-page.php
+msgid "Icon"
+msgstr "Icona"
+
+#: sections-page.php
+msgid "Choose an icon for this section."
+msgstr "Seleziona un’icona per questa sezione."
+
+#: sections-page.php
+msgid "Select icon"
+msgstr "Seleziona icona"
+
+#: sections-page.php
+msgid "Remove icon"
+msgstr "Rimuovi icona"
+
+#: sections-page.php
+msgid "Section:"
+msgstr "Sezione:"
+
+#: sections-page.php
+msgid "Root"
+msgstr "Root"
+
+#: sections-page.php
+msgid "Edit Section"
+msgstr "Modifica Sezione"
+
+#: sections-page.php
+msgid "Parent"
+msgstr "Genitore"
+
+#: Widgets basepress-products-widget.php
+msgid "knowledge Base - Products"
+msgstr "knowledge Base - Prodotti"
+
+#: basepress-products-widget.php
+msgid "Title:"
+msgstr "Titolo:"
+
+#: basepress-products-widget.php
+msgid "Number of products to show:"
+msgstr "Numero di articoli da mostrare:"
+
+#: basepress-products-widget.php
+msgid "Order by:"
+msgstr "Ordina per:"
+
+#: basepress-products-widget.php
+msgid "Custom"
+msgstr "Personalizzato"
+
+#: basepress-products-widget.php
+msgid "Date Ascending"
+msgstr "Data ascendente"
+
+#: basepress-products-widget.php
+msgid "Date Descending"
+msgstr "Data Discendente"
+
+#: basepress-products-widget.php
+msgid "Display as dropdown"
+msgstr "Mostra come dropdown"
+
+#: basepress-products-widget.php
+msgid "Exclude current product"
+msgstr "Escludi prodotto corrente"
+
+#: basepress-products-widget.php
+msgid "Lists all the products in the Knowledge Base"
+msgstr "Elenca tutti i prodotti nel Knowledge Base"
+
+#: basepress-products-widget.php
+msgid "New title"
+msgstr "Nuovo titolo"
+
+#: basepress-related-articles-widget.php
+msgid "Number of articles to show:"
+msgstr "Numero di articoli da mostrare:"
+
+#: basepress-related-articles-widget.php
+msgid "knowledge Base - Related Articles"
+msgstr "Knowledge Base - Articoli relativi"
+
+#: basepress-related-articles-widget.php
+msgid "Lists articles related to the current section in the Knowledge Base"
+msgstr "Elenca gli articoli relativi a quello corrente nel Knowledge Base"
+
+#: basepress-sections-widget.php
+msgid "Number of sections to show:"
+msgstr "Numero Sezioni da mostrare:"
+
+#: basepress-sections-widget.php
+msgid "Display posts count"
+msgstr "Mostra numero articoli"
+
+#: basepress-sections-widget.php
+msgid "knowledge Base - Sections"
+msgstr "Knowledge Base - Sezioni"
+
+#: basepress-sections-widget.php
+msgid "Lists all sections for the current product in the Knowledge Base"
+msgstr "Elenca tuttle lesezioni del prodotto corrente nel Knowledge Base"
+
+#: basepress-popular-articles-widget.php
+msgid "Order by Views"
+msgstr "Ordina per visite"
+
+#: basepress-popular-articles-widget.php
+msgid "Order by Score"
+msgstr "Ordina per punteggio"
+
+#: basepress-popular-articles-widget.php
+msgid "knowledge Base - Top Articles"
+msgstr "knowledge Base - Articoli in testa"
+
+#: basepress-popular-articles-widget.php
+msgid "Lists articles with most views and/or best score for the current product in the Knowledge Base"
+msgstr "Elenca gli articoli con visite maggiori o punteggio migliori per il prodotto corrente nel Knowledge Base"
+
+#: basepress-widgets.php
+msgid "Knowledge Base Sidebar"
+msgstr "Knowledge Base Sidebar"
+
+#: basepress-widgets.php
+msgid "Add here the widgets to appear on the knowledge base pages"
+msgstr "Aggiungi qui i widget da mostrare nelle pagine del Knowledge Base"
+
+#: Short Code Editor basepress-shortcodes.php
+msgid "Add Knowledge Base Shortcode"
+msgstr "Aggiungi Shortcode Knowledge Base"
+
+#: basepress-shortcodes.php
+msgid "All Sections"
+msgstr "Tutte le Sezioni"
+
+#: basepress-shortcodes.php
+msgid "Order by"
+msgstr "Ordina per"
+
+#: basepress-shortcodes.php
+msgid "Order"
+msgstr "Ordine"
+
+#: basepress-shortcodes.php
+msgid "Ascending"
+msgstr "Ascendente"
+
+#: basepress-shortcodes.php
+msgid "Descending"
+msgstr "Discendente"
+
+#: basepress-shortcodes.php
+msgid "Number of Posts"
+msgstr "Numero Articoli"
+
+#: basepress-shortcodes.php
+msgid "Test it"
+msgstr "Testa"
+
+#: basepress-shortcodes.php
+msgid "Add it"
+msgstr "Aggiungi"
+
+#: basepress-wpml-support.php
+msgid "Restore Category Screen"
+msgstr "Ripristina Pagina Categorie"
+
+#: basepress-wpml-support.php
+msgid "Restores the standard WordPress Category screen for the Knowledge Base."
+msgstr "Ripristina la schermata standard di WordPress per le categorie del Knowledge Base."
+
+#: Default Theme Translation products.php Used in the product page button
+msgid "Choose Product"
+msgstr "Seleziona Prodotto"
+
+#: Used in the sections articles list
+msgid "View %d article"
+msgid_plural "View all %d articles"
+msgstr[0] "Visualizza %d articolo"
+msgstr[1] "Visualizza %d articoli"
+
+#: icons-manager.php
+msgid "Icons Manager"
+msgstr "Gestore Icone"
+
+#: icons-manager.php
+msgid "Css URI"
+msgstr "Css URI"
+
+#: icons-manager.php
+msgid "Extra Classes"
+msgstr "Extra Classi"
+
+#: icons-manager.php
+msgid "Load Icons"
+msgstr "Carica Icone"
+
+#: icons-manager.php
+msgid "Don't load icons font on front end"
+msgstr "Non caricare il font delle icone nel front end"
+
+#: icons-manager.php
+msgid "Articles Icons"
+msgstr "Icone Articoli"
+
+#: icons-manager.php
+msgid "Sections Icons"
+msgstr "Icone Sezioni"
+
+#: icons-manager.php
+msgid "Breadcrumbs Icons"
+msgstr "Icone Breadcrumbs"
+
+#: icons-manager.php
+msgid "Votes Icons"
+msgstr "Icone Voti"
+
+#: icons-manager.php
+msgid "Pagination Icons"
+msgstr "Icone Paginazione"
+
+#: icons-manager.php
+msgid "Post Meta Icons"
+msgstr "Icone Post Meta"
+
+#: icons-manager.php
+msgid "Sort Icons"
+msgstr "Ordina Icone"
+
+#: icons-manager.php
+msgid "Restore Saved Icons"
+msgstr "Ripristina Icone Salvate"
+
+#: icons-manager.php
+msgid "Restore Defualt Icons"
+msgstr "Ripristina Icone Predefinite"
+
+#: icons-manager.php
+msgid "Save Icons"
+msgstr "Salve Icone"
+
+#: icons-manager.php
+msgid "The icons css file could not be found!"
+msgstr "Il file css delle icone non è stato trovato!"
+
+#: icons-manager.php
+msgid "The icons options have been saved."
+msgstr "Le opzioni delle icone sono state salvate."
+
+#: icons-manager.php
+msgid "The icons options could not be saved. Please try again."
+msgstr "Non è stato possible salvare le opzioni. Riprova."
+
+#: icons-manager.php
+msgid "The icons options have been restored to default."
+msgstr "Le opzioni predefinite delle icone sono state ripristinate."
+
+#: icons-manager.php
+msgid "The icons options could not be restored to default. Please try again."
+msgstr "Non è stato possibile ripristinare le icone predefinite. Riprova."
+
+#: basepress-manual.php
+msgid "Manual"
+msgstr "Manuale"
+
+#: class-basepress-insight.php
+msgid "Are you sure you want to delete logs older than"
+msgstr "Sei sicuro di voler eliminare i dati più vecchi del"
+
+#: class-basepress-insight.php
+msgid "Insights"
+msgstr "Insights"
+
+#: class-basepress-insight.php
+msgid "Date Range"
+msgstr "Intervallo date"
+
+#: class-basepress-insight.php
+msgid "From"
+msgstr "Da"
+
+#: class-basepress-insight.php
+msgid "To"
+msgstr "a"
+
+#: class-basepress-insight.php
+msgid "Manage Logs"
+msgstr "Gestisci i dati"
+
+#: class-basepress-insight.php
+msgid "Delete Logs"
+msgstr "Elimina i dati"
+
+#: class-basepress-insight.php
+msgid "Older than"
+msgstr "Più vecchi del"
+
+#: class-basepress-insight.php
+msgid "Delete"
+msgstr "Elimina"
+
+#: class-basepress-insight.php
+msgid "Views and Scores"
+msgstr "Visite e Punteggi"
+
+#: class-basepress-insight.php
+msgid "Searches"
+msgstr "Ricerche"
+
+#: class-basepress-insight.php
+msgid "Visits by time range"
+msgstr "Visite nell’intervallo"
+
+#: class-basepress-insight.php
+msgid "Most Visited"
+msgstr "Più visitati"
+
+#: class-basepress-insight.php
+msgid "Most visited by time range"
+msgstr "Più visitati nell’intervallo"
+
+#: class-basepress-insight.php
+msgid "Highest Score"
+msgstr "Punteggio più alto"
+
+#: class-basepress-insight.php
+msgid "Lowest Score"
+msgstr "Punteggio più basso"
+
+#: class-basepress-insight.php
+msgid "Searches by time range"
+msgstr "Ricerche nell’intervallo"
+
+#: class-basepress-insight.php
+msgid "Top Searches"
+msgstr "Ricerche popolari"
+
+#: class-basepress-insight.php
+msgid "Top Searches by time range"
+msgstr "Ricerche popolari nell’intervallo"
+
+#: class-basepress-insight.php
+msgid "Failed Searches"
+msgstr "Ricerche senza risultati"
+
+#: class-basepress-insight.php
+msgid "Global"
+msgstr "Globale"
+
+#: class-basepress-insight.php
+msgid "No results to display here!"
+msgstr "Nessun risultato da mostrare qui!"
+
+#: class-basepress-insight.php
+msgid "Global search"
+msgstr "Ricerca globale"
+
+#: class-basepress-insight.php
+msgid "Time"
+msgstr "Periodo"

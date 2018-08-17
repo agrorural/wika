@@ -1,0 +1,95 @@
+#feed {
+  background-color: rgba($secondary, 0.1);
+
+  .widgetTitle {
+    margin-bottom: 1.5rem;
+  }
+
+  a {
+    @include font-family();
+
+    font-size: 16px;
+    // transition: color 2s ease;
+    color: rgba(0, 0, 0, 0.85);
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .updated {
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+#deckInfo {
+  .card {
+    background-color: transparent;
+    border: 0 none;
+    border-radius: 0;
+    text-align: center;
+    margin: auto;
+
+    .btn-link {
+      transition: background-color 0.7s ease, color 0.7s ease;
+      background-color: rgba($primary, 0.15);
+
+      &:hover {
+        background-color: rgba($primary, 75);
+        color: white;
+      }
+    }
+
+    h5 > a {
+      color: #515151;
+    }
+
+    svg {
+      margin: 0 auto 2rem;
+      font-size: 48px;
+      transform: scale(1);
+      transition: all 0.3s ease;
+      opacity: 0.5;
+    }
+
+    .card-body {
+      .card-title {
+        margin-bottom: 1.25rem;
+      }
+    }
+
+    .card-footer {
+      padding: 0.75rem 1.25rem;
+      background-color: transparent;
+      border-top: 0 none;
+    }
+
+    &:hover {
+      h5 > a {
+        color: $primary;
+      }
+
+      svg {
+        color: $primary;
+        transform: scale(1.25);
+        opacity: 0.75;
+      }
+    }
+  }
+}
+
+#feedback {
+  background-color: transparent;
+  background-image: url("../images/feedback.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: white;
+
+  @include media-breakpoint-up(md) {
+    .row {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}

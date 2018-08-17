@@ -1,0 +1,16 @@
+@mixin text-render() {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+
+@mixin font-family( $font: 'libre_franklin', $variation: 'light' ) {
+  font-family: $font + $variation, Arial, sans-serif;
+
+  @include text-render();
+
+  @if ($font == 'viga') {
+    text-transform: uppercase;
+  }
+}

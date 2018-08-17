@@ -1,0 +1,30 @@
+/** Search form */
+.search-form {
+  @extend .form-inline;
+}
+
+.search-form label {
+  @extend .form-group;
+
+  font-weight: normal;
+}
+
+.search-form .search-field {
+  @extend .form-control;
+}
+
+.search-form .search-submit {
+  @extend .btn;
+  @extend .btn-secondary;
+}
+
+#ajaxSearch {
+  .custom-select {
+    height: 100%;
+    border-radius: 0;
+    background-color: $secondary;
+    border-color: $secondary;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}

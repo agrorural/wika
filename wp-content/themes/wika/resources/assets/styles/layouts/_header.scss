@@ -1,0 +1,180 @@
+.banner {
+  margin-bottom: 2rem;
+
+  .nav {
+    li {
+      @extend .nav-item;
+
+      a {
+        @extend .nav-link;
+        @extend .fancy-link-center;
+
+        @include font-family('ubuntu', 'medium');
+
+        &:hover {
+          &::before {
+            background: $secondary;
+          }
+        }
+      }
+
+      &.current-menu-item {
+        a {
+          &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            bottom: 0;
+            background: $secondary;
+            height: 2px;
+            transition-property: left, right;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out;
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .page-header {
+    background-color: rgba($primary, 0.1);
+    padding: 1rem 0;
+
+    h1 {
+      @include font-family('ubuntu', 'regular');
+
+      font-size: 1.75rem;
+    }
+  }
+
+  .header-wrapper {
+    position: relative;
+
+    .container {
+      position: relative;
+
+      .branding {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 0;
+
+        @include media-breakpoint-up(md) {
+          flex-direction: row;
+        }
+
+        a {
+          display: block;
+          position: relative;
+          color: $secondary;
+        }
+
+        svg {
+          fill: $secondary;
+        }
+      }
+    }
+
+    &::before {
+      background-color: rgba($primary, 0.8);
+      content: ' ';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    &::after {
+      background-image: url(http://104.236.16.244/knowledgepress/wp-content/uploads/sites/3/2015/10/discussing_features.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: scroll;
+      content: ' ';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -2;
+    }
+  }
+
+  .home & {
+    h1,
+    p {
+      color: white;
+    }
+
+    .header-wrapper {
+      // overflow: hidden;
+      .container {
+        position: relative;
+        text-align: center;
+
+        .masshead {
+          padding: 30px;
+          max-width: 768px;
+          margin: auto;
+
+          @include media-breakpoint-up(md) {
+            padding: 150px 0 100px;
+          }
+
+          p {
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+
+    form {
+      input,
+      .btn {
+        border-radius: 0;
+        font-size: 1.05rem;
+      }
+
+      input {
+        padding-right: 48px;
+        padding-left: 18px;
+        border-color: white;
+        // border-top-left-radius: 24px;
+        // border-bottom-left-radius: 24px;
+
+        &:focus {
+          border-color: white;
+          box-shadow: none;
+        }
+      }
+
+      #searchTrigger {
+        // border-top-right-radius: 24px;
+        // border-bottom-right-radius: 24px;
+        border-left: 1px solid transparent;
+      }
+
+      #backspaceTrigger,
+      #spinner {
+        position: absolute;
+        top: 8px;
+        font-size: 20px;
+        color: #999;
+        cursor: pointer;
+        z-index: 3;
+      }
+
+      #backspaceTrigger {
+        right: 180px;
+      }
+
+      #spinner {
+        right: 215px;
+      }
+    }
+  }
+}
