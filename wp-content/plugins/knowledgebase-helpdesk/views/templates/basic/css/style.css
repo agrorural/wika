@@ -1,0 +1,219 @@
+﻿.category-list .category {
+	text-align: center;
+	display: inline-block;
+	width: 28%;
+	border: 1px solid #e0e0e0;
+	margin: 0 .8% 20px;
+	padding: 1.5em 1em;
+	cursor: pointer;
+	-webkit-transition: background .15s;
+	-moz-transition: background .15s;
+	-o-transition: background .15s;
+	transition: background .15s;
+	vertical-align: top;
+}
+.category {
+	border-radius: 3px;
+}
+.category-list h3 {
+	color: #333;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.3em;
+}
+.category-list .category p {
+	color: #b3b3b3;
+}
+.category-list .category .article-count {
+	color: #4381b5;
+	margin-top: 15px;
+}
+a {
+	color: #4381b5;
+	text-decoration: none;
+}
+a:hover {
+	color: #0f3647;
+}
+#docsSearch {
+	background: #f4f7f9;
+	border: 1px solid #DFDFDF;
+}
+#docsSearch {
+	background: #F5F5F5;
+	border-bottom: 1px solid #DFDFDF;
+	margin-bottom: 3em;
+	padding: 1.5em 0;
+}
+#searchBar {
+	text-align: center;
+	margin-bottom: 0;
+	padding: 2em 0;
+	position: relative;
+	width: 620px;
+	margin: 0 auto;
+}
+#searchBar .search-query {
+	border-radius: 5px;
+	font-size: 18px;
+	line-height: 22px;
+	width: 100%;
+	height: 50px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#searchBar .search-query {
+	border-radius: 5px;
+	font-size: 18px;
+	line-height: 22px;
+	width: 100%;
+	height: 50px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+input.search-query {
+	padding-right: 14px;
+	padding-right: 4px \9;
+	padding-left: 14px;
+	padding-left: 4px \9;
+	margin-bottom: 0;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+#searchBar button {
+	background-color: #168eea;
+	border: 1px solid transparent;
+	text-shadow: initial;
+}
+#searchBar button {
+	color: #fff;
+	text-shadow: 0 -1px 1px rgba(0,0,0,.4);
+	-webkit-border-radius: 0 5px 5px 0;
+	border-radius: 0 5px 5px 0;
+	border: 1px solid #407FB3;
+	font-size: 18px;
+	padding: 0 1.5em;
+	height: 50px;
+	position: absolute;
+	top: 28px;
+	right: -1px;
+}
+.category-list .category:hover {
+	text-decoration: none;
+	background: #f8f8f8;
+}
+#searchBar button:hover {
+	background: #137ac9;
+}
+
+#serp-dd {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #ccc;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 2px 5px rgba(100, 100, 100, 0.2);
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  z-index: 1;
+}
+
+#serp-dd .result {
+  margin: 0;
+  max-height: 485px;
+  overflow: auto;
+}
+
+#serp-dd .result > li:first-child {
+  margin-top: 5px;
+}
+
+#serp-dd .result > li {
+  list-style: outside none none;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  text-align: left;
+}
+
+#serp-dd .result a {
+  display: block;
+  font-size: 15px;
+  padding: 7px 15px;
+}
+
+#serp-dd .result a:hover {
+  background: #f3f3f3 none repeat scroll 0 0;
+  color: #4381b5;
+  text-decoration: none;
+}
+
+#kbx-query{
+	padding-left: 15px;
+}
+
+#kbx-query.searching {
+  background: #fff url("../ripple.gif") no-repeat scroll 80% center;
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  .category-list .category {
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+	#searchBar {
+	width: 100%;
+	
+	}
+	#searchBar button {
+		
+		position: relative;
+		top: 9px;
+		right: -1px;
+		width: 100%;
+	}
+	#docsSearch {
+		
+		padding: 1.5em 1em;
+	}
+
+	#kbx-query.searching {
+	  background: #fff url("../ripple.gif") no-repeat scroll 100% center;
+	}
+
+}
+
+@media (min-width: 601px) and (max-width: 767px) {
+   
+    .category-list .category {
+		width: 48%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	#searchBar {
+	width: 100%;
+	
+	}
+
+	#kbx-query.searching {
+	  background: #fff url("../ripple.gif") no-repeat scroll 98% center;
+	}
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .category-list .category {
+	width: 28%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+	
+}
+

@@ -1,0 +1,180 @@
+.clear{
+	clear: both;
+}
+
+.archive-title, .page-title, .widget-title, .entry-content th, .comment-content th {
+  color: #636363;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 2.18182;
+  margin-bottom: 10px !important;
+}
+
+.archive-header, .page-header {
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  margin-top: 25px;
+}
+
+#categoryHead {
+  position: relative;
+}
+
+#categoryHead h1 {
+  margin-right: 145px;
+}
+
+#categoryHead h1 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.2em;
+  margin-top: 0;
+}
+
+#categoryHead .sort {
+  position: absolute;
+  right: 0;
+  top: 8px;
+}
+
+.articleList {
+  font-size: 1.3em;
+  list-style: outside none none;
+  margin: 0 0 38px;
+}
+
+.articleList li {
+  margin: 1.4em 0;
+  padding-left: 25px;
+}
+
+.articleList li a, .articleList li a span{
+  color: #4381b5;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.articleList span {
+  padding-left: 7px;
+}
+
+.kbx-articles ul li{
+  list-style: none;
+  margin-left: 0;
+}
+
+.kbx-pagination {
+  padding-left: 25px;
+}
+
+.kbx-pagination .page-numbers {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 0 2px 0 0;
+  border: 1px solid #eee;
+  line-height: 1;
+  text-decoration: none;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+.kbx-pagination .page-numbers.current, .kbx-pagination a.page-numbers:hover {
+  background: #f9f9f9;
+}
+
+/*Glossary*/
+.glossary-letters {
+  margin-bottom: 20px;
+  padding-left: 24px;
+}
+
+.glossary-letters li {
+  display: inline;
+}
+
+.glossary-letters ul li a {
+  border: 1px solid #4381b5;
+  box-shadow: none;
+  display: block;
+  float: left;
+  font-size: 11px;
+  margin-left: -1px;
+  padding: 5px 8px;
+  text-decoration: none;
+  color: #4381b5;
+}
+
+.glossary-letters ul li a:hover, .glossary-letters ul li a.g-selected {
+  background-color: #eaeaea;
+}
+
+.kbx-center{
+  text-align: center;
+}
+
+.kbx-strong{
+  font-weight: bold;
+}
+
+/*******************************
+ * Dispaly Single Stat
+ *******************************/
+.kbx-post-single-stats {
+  border: 2px solid #ccc;
+  padding: 15px 25px;
+  border-width: 1px 1px 1px 5px;
+  border-color: #ccc;
+  box-shadow: 2px 1px #cecece;
+}
+
+.kbx-post-single-stats, .kbx-post-single-stats a{
+  color: #444;
+}
+
+.kbx-stats span{
+  margin-right: 15px;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.kbx-stats .kbx-icon {
+  font-weight: bold;
+}
+
+.kbx-view-icon.kbx-icon {
+  border-left: 2px solid #ccc;
+  padding-left: 15px;
+}
+
+.kbx-inline{
+  display: inline-block;
+}
+
+.kbx-outer-wrapper{
+  max-width: 80%;
+  margin: 20px auto;
+}
+
+.single .kbx-outer-wrapper{
+  max-width: 90%;
+  margin: 20px auto;
+}
+
+.kbx-article-body {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.kbx-article-body .kbx-post-single-stats{
+  margin-top: 25px;
+}
+
+.single-kbx-post-outer .page-header{
+  margin-bottom: 20px !important;
+  padding-bottom: 10px !important;
+}
+
+.single-kbx-post-outer {
+  margin-bottom: 30px;
+}

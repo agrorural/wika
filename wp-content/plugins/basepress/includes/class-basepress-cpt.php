@@ -18,6 +18,7 @@ if ( !class_exists( 'Basepress_CPT' ) ) {
          */
         public function __construct()
         {
+            global  $basepress_utils ;
             //Add rewrite rules to handle links properly
             add_filter( 'rewrite_rules_array', array( $this, 'rewrite_rules' ) );
             //Add the product and section name on the post permalink
@@ -56,33 +57,9 @@ if ( !class_exists( 'Basepress_CPT' ) ) {
             //Add admin notice for articles with missing data
             add_action( 'admin_notices', array( $this, 'missing_data_notice' ) );
             $this->options = get_option( 'basepress_settings' );
-            $this->kb_slug = $this->get_kb_slug();
+            $this->kb_slug = $basepress_utils->get_kb_slug();
             $this->register_taxonomy();
             $this->register_post_type();
-        }
-        
-        /**
-         * Gets the KB slug including parents pages if exists
-         *
-         * @since 1.7.9
-         *
-         * @return string
-         */
-        public function get_kb_slug()
-        {
-            $entry_page = ( isset( $this->options['entry_page'] ) ? $this->options['entry_page'] : 0 );
-            /**
-             * Filters the entry page ID before use
-             */
-            $entry_page = apply_filters( 'basepress_entry_page', $entry_page );
-            $parents = get_ancestors( $entry_page, 'page' );
-            $kb_slug = get_post_field( 'post_name', $entry_page );
-            foreach ( $parents as $parent ) {
-                $parent_slug = get_post_field( 'post_name', $parent );
-                $kb_slug = $parent_slug . '/' . $kb_slug;
-            }
-            $this->kb_slug = $kb_slug;
-            return $kb_slug;
         }
         
         /**
@@ -97,13 +74,13 @@ if ( !class_exists( 'Basepress_CPT' ) ) {
          */
         public function rewrite_rules( $rules )
         {
-            global  $wp_rewrite ;
+            global  $wp_rewrite, $basepress_utils ;
             $options = get_option( 'basepress_settings' );
             //If the entry page has not been set skip the rewrite rules
             if ( !isset( $options['entry_page'] ) ) {
                 return $rules;
             }
-            $kb_slug = $this->get_kb_slug();
+            $kb_slug = $basepress_utils->get_kb_slug();
             /**
              * Filter the kb_slug before generating the rewrite rules
              * @since 1.5.0
@@ -553,10 +530,12 @@ if ( !class_exists( 'Basepress_CPT' ) ) {
                 
                 if ( 'edit' == $action && 'knowledgebase' == $post_type ) {
                     $missing_options = array();
-                    if ( empty(get_the_terms( $post->ID, 'knowledgebase_cat' )[0]) ) {
+                    $post_terms = get_the_terms( $post->ID, 'knowledgebase_cat' )[0];
+                    $post_meta = get_post_meta( $post->ID, 'basepress_template_name', true );
+                    if ( empty($post_terms) ) {
                         $missing_options[] = __( 'Section', 'basepress' );
                     }
-                    if ( empty(get_post_meta( $post->ID, 'basepress_template_name', true )) ) {
+                    if ( empty($post_meta) ) {
                         $missing_options[] = __( 'Template', 'basepress' );
                     }
                     

@@ -4,7 +4,7 @@ Theme URI:
 Author: 8bitsinarow.com
 Author URI: 8bitsinarow.com
 Description: This is the admin theme for BasePress
-Version: 1.7.8
+Version: 1.8.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: 
@@ -15,8 +15,8 @@ body.basepress-modal-on{
 	overflow-y: hidden;
 }
 
-.knowledgebase_page_products *,
-.knowledgebase_page_sections *,
+.knowledgebase_page_products #wpbody-content *,
+.knowledgebase_page_sections #wpbody-content *,
 .knowledgebase_page_postorder *,
 .basepress_page_icons-manager *{
 	box-sizing: border-box;

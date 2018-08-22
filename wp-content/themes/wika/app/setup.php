@@ -17,7 +17,8 @@ add_action('wp_enqueue_scripts', function () {
     $ajax_params = array(
       'ajax_url' => admin_url('admin-ajax.php'),
       'ajax_nonce' => wp_create_nonce('my_nonce'),
-      'has_admin_bar' => is_admin_bar_showing()
+      'has_admin_bar' => is_admin_bar_showing(),
+      'is_home' => is_home(),
     );
 
     wp_localize_script('sage/main.js', 'wp', $ajax_params);
@@ -74,6 +75,8 @@ add_action('after_setup_theme', function () {
      * @see resources/assets/styles/layouts/_tinymce.scss
      */
     add_editor_style(asset_path('styles/main.css'));
+
+    load_theme_textdomain('sage', get_template_directory() . '/lang');
 }, 20);
 
 /**

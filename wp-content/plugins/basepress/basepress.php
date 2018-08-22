@@ -4,7 +4,7 @@
  * Plugin Name: BasePress
  * Plug URI: http://www.8bitsinarow.com
  * Description: The perfect Knowledge Base plugin for WordPress
- * Version: 1.8.5
+ * Version: 1.8.8
  * Author: 8Bits in a row
  * Author URI: http://www.8bitsinarow.com
  * Text Domain: basepress
@@ -72,7 +72,7 @@ if ( !function_exists( 'base_fs' ) ) {
              *
              * @var string
              */
-            public  $ver = '1.8.5' ;
+            public  $ver = '1.8.8' ;
             /**
              * Database version
              *

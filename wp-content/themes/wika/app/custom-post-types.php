@@ -4,95 +4,96 @@ namespace App;
 
 add_action( 'init',  __NAMESPACE__ . '\\create_my_post_types' );
 function create_my_post_types() {
-	$labels_producto = array(
-		'name'               => _x( 'Productos', 'post type general name', 'incl' ),
-		'singular_name'      => _x( 'Producto', 'post type singular name', 'incl' ),
-		'menu_name'          => _x( 'Productos', 'admin menu', 'incl' ),
-		'name_admin_bar'     => _x( 'Producto', 'Agregar Nuevo on admin bar', 'incl' ),
-		'add_new'            => _x( 'Agregar Nuevo', 'Producto', 'incl' ),
-		'add_new_item'       => __( 'Agregar Nuevo Producto', 'incl' ),
-		'new_item'           => __( 'Nuevo Producto', 'incl' ),
-		'edit_item'          => __( 'Editar Producto', 'incl' ),
-		'view_item'          => __( 'Ver Producto', 'incl' ),
-		'all_items'          => __( 'Todos', 'incl' ),
-		'search_items'       => __( 'Buscar Productos', 'incl' ),
-		'parent_item_colon'  => __( 'Producto Padre:', 'incl' ),
-		'not_found'          => __( 'Ningún Producto encontrado.', 'incl' ),
-		'not_found_in_trash' => __( 'Ningún Producto encontrado en la Papelera.', 'incl' )
+	$labels_faq = array(
+		'name'               => _x( 'Preguntas Frecuentes', 'post type general name', 'wika' ),
+		'singular_name'      => _x( 'Pregunta Frecuente', 'post type singular name', 'wika' ),
+		'menu_name'          => _x( 'Preguntas Frecuentes', 'admin menu', 'wika' ),
+		'name_admin_bar'     => _x( 'Pregunta Frecuente', 'Agregar Nuevo on admin bar', 'wika' ),
+		'add_new'            => _x( 'Agregar Nueva', 'Pregunta Frecuente', 'wika' ),
+		'add_new_item'       => __( 'Agregar Nueva Pregunta Frecuente', 'wika' ),
+		'new_item'           => __( 'Nueva Pregunta Frecuente', 'wika' ),
+		'edit_item'          => __( 'Editar Pregunta Frecuente', 'wika' ),
+		'view_item'          => __( 'Ver Pregunta Frecuente', 'wika' ),
+		'all_items'          => __( 'Todas', 'wika' ),
+		'search_items'       => __( 'Buscar Preguntas Frecuentes', 'wika' ),
+		'parent_item_colon'  => __( 'Pregunta Frecuente Padre:', 'wika' ),
+		'not_found'          => __( 'Ninguna Pregunta Frecuente encontrada.', 'wika' ),
+		'not_found_in_trash' => __( 'Ninguna Pregunta Frecuente encontrada en la Papelera.', 'wika' )
 	);
 
-	$args_producto = array(
-		'labels'             => $labels_producto,
-    'description'        => __( 'Productos de AGRO RURAL.', 'incl' ),
+	$args_faq = array(
+		'labels'             => $labels_faq,
+    'description'        => __( 'Preguntas Frecuentes de AGRO RURAL.', 'wika' ),
 		'public'             => true,
 		'publicly_queryable' => true,
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'capability_type' => 'producto',
+		'capability_type' => 'faq',
 			'capabilities' => array(
-				'publish_posts' => 'publish_productos',
-				'edit_posts' => 'edit_productos',
-				'edit_others_posts' => 'edit_others_productos',
-				'delete_posts' => 'delete_productos',
-				'delete_others_posts' => 'delete_others_productos',
-				'read_private_posts' => 'read_private_productos',
-				'edit_post' => 'edit_producto',
-				'delete_post' => 'delete_producto',
-				'read_post' => 'read_producto',
+				'publish_posts' => 'publish_faqs',
+				'edit_posts' => 'edit_faqs',
+				'edit_others_posts' => 'edit_others_faqs',
+				'delete_posts' => 'delete_faqs',
+				'delete_others_posts' => 'delete_others_faqs',
+				'read_private_posts' => 'read_private_faqs',
+				'edit_post' => 'edit_faq',
+				'delete_post' => 'delete_faq',
+				'read_post' => 'read_faq',
 			),
 		'has_archive'        => true,
 		'hierarchical'       => true,
-		'rewrite'            => array( 'slug' => 'productos' ),
+		'rewrite'            => array( 'slug' => 'faqs' ),
 		'menu_position'      => 10,
-		'menu_icon'			 => 'dashicons-cart',
+		'menu_icon'			 => 'dashicons-megaphone',
 		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
 	);
 
-	register_post_type('producto', $args_producto);
+	register_post_type('faq', $args_faq);
 }
 
 add_action( 'init',  __NAMESPACE__ . '\\create_my_taxonomies', 0 );
 function create_my_taxonomies() {
 	// Agregar Nuevo taxonomy, make it hierarchical (like categories)
-	$labels_producto_productor = array(
-		'name'              => _x( 'Productores', 'taxonomy general name' ),
-		'singular_name'     => _x( 'Productor', 'taxonomy singular name' ),
-		'search_items'      => __( 'Buscar productores' ),
-		'all_items'         => __( 'Todos los  productores' ),
-		'parent_item'       => __( 'Productor Padre' ),
-		'parent_item_colon' => __( 'Productor Padre:' ),
-		'edit_item'         => __( 'Editar productor' ),
-		'update_item'       => __( 'Actualizar productor' ),
-		'add_new_item'      => __( 'Agregar Nuevo productor' ),
-		'new_item_name'     => __( 'Nombre de Nuevo productor' ),
-		'menu_name'         => __( 'Productores' )
+	$labels_faq_sistema = array(
+		'name'              => _x( 'Sistemas', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Sistema', 'taxonomy singular name' ),
+		'search_items'      => __( 'Buscar Sistemas' ),
+		'all_items'         => __( 'Todos los  Sistemas' ),
+		'parent_item'       => __( 'Sistema Padre' ),
+		'parent_item_colon' => __( 'Sistema Padre:' ),
+		'edit_item'         => __( 'Editar Sistema' ),
+		'update_item'       => __( 'Actualizar Sistema' ),
+		'add_new_item'      => __( 'Agregar Nuevo Sistema' ),
+		'new_item_name'     => __( 'Nombre de Nuevo Sistema' ),
+		'menu_name'         => __( 'Sistemas' )
 	);
 
-	$args_producto_productor = array(
+	$args_faq_sistema = array(
 		'public' 			=> true,
-		'hierarchical'      => false,
-		'labels'            => $labels_producto_productor,
+		'hierarchical'      => true,
+		'labels'            => $labels_faq_sistema,
 		'show_ui'           => true,
 		'show_admin_column' => true,
-		'query_var'         => true,
+    'query_var'         => true,
+    'rewrite'            => array( 'slug' => 'faqs/sistemas' ),
 		'capabilities'		=> array(
-			'manage_terms' => 'manage_productor',
-			'edit_terms' => 'edit_productor',
-			'delete_terms' => 'delete_productor',
-			'assign_terms' => 'assign_productor'
+			'manage_terms' => 'manage_sistema',
+			'edit_terms' => 'edit_sistema',
+			'delete_terms' => 'delete_sistema',
+			'assign_terms' => 'assign_sistema'
 		)
 	);
 
-	register_taxonomy( 'productor', 'producto', $args_producto_productor );
+	register_taxonomy( 'sistema', 'faq', $args_faq_sistema );
 }
 
-add_filter( 'map_meta_cap',  __NAMESPACE__ . '\\producto_meta_cap', 10, 4 );
+add_filter( 'map_meta_cap',  __NAMESPACE__ . '\\faq_meta_cap', 10, 4 );
 
-function producto_meta_cap( $caps, $cap, $user_id, $args ) {
+function faq_meta_cap( $caps, $cap, $user_id, $args ) {
 
 	/* If editing, deleting, or reading a producto, get the post and post type object. */
-	if ( 'edit_producto' == $cap || 'delete_producto' == $cap || 'read_producto' == $cap ) {
+	if ( 'edit_faq' == $cap || 'delete_faq' == $cap || 'read_faq' == $cap ) {
 		$post = get_post( $args[0] );
 		$post_type = get_post_type_object( $post->post_type );
 
@@ -101,7 +102,7 @@ function producto_meta_cap( $caps, $cap, $user_id, $args ) {
 	}
 
 	/* If editing a producto, assign the required capability. */
-	if ( 'edit_producto' == $cap ) {
+	if ( 'edit_faq' == $cap ) {
 		if ( $user_id == $post->post_author )
 			$caps[] = $post_type->cap->edit_posts;
 		else
@@ -109,7 +110,7 @@ function producto_meta_cap( $caps, $cap, $user_id, $args ) {
 	}
 
 	/* If deleting a producto, assign the required capability. */
-	elseif ( 'delete_producto' == $cap ) {
+	elseif ( 'delete_faq' == $cap ) {
 		if ( $user_id == $post->post_author )
 			$caps[] = $post_type->cap->delete_posts;
 		else
@@ -117,7 +118,7 @@ function producto_meta_cap( $caps, $cap, $user_id, $args ) {
 	}
 
 	/* If reading a private producto, assign the required capability. */
-	elseif ( 'read_producto' == $cap ) {
+	elseif ( 'read_faq' == $cap ) {
 
 		if ( 'private' != $post->post_status )
 			$caps[] = 'read';

@@ -157,3 +157,86 @@ a {
     }
   }
 }
+
+//
+// Ajax Search Form
+//
+#ajaxSearch {
+  input,
+  .btn {
+    border-radius: 0;
+    font-size: 1.05rem;
+  }
+
+  input {
+    padding-right: 48px;
+    padding-left: 18px;
+    border-color: white;
+    // border-top-left-radius: 24px;
+    // border-bottom-left-radius: 24px;
+
+    &:focus {
+      border-color: white;
+      box-shadow: none;
+    }
+  }
+
+  #searchTrigger {
+    // border-top-right-radius: 24px;
+    // border-bottom-right-radius: 24px;
+    border-left: 1px solid transparent;
+  }
+
+  #backspaceTrigger,
+  #spinner {
+    position: absolute;
+    top: 8px;
+    font-size: 20px;
+    color: #999;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  #backspaceTrigger {
+    right: 180px;
+  }
+
+  #spinner {
+    right: 215px;
+  }
+}
+
+//
+// Breadcrumbs
+//
+.breadcrumb-trail {
+  .trail-items {
+    @extend .breadcrumb;
+
+    padding: 0 0 0.5rem;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-radius: 0;
+    font-size: 85%;
+  }
+}
+
+#logo {
+  fill: $secondary;
+
+  #glass {
+    left: 0;
+    transform: rotateY(0deg);
+    transition: all 0.5s ease;
+
+    #glassInner {
+      fill: #afebeb;
+    }
+  }
+
+  &:hover {
+    #glass {
+      transform: rotateY(15deg);
+    }
+  }
+}

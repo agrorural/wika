@@ -43,6 +43,7 @@
 
     @php
     $kb_query = App::customQuery('knowledgebase', 3);
+    $faq_query = App::customQuery('faq', 3);
     $bbp_query = App::customQuery('forum', 3);
     //var_dump($bbp_query->have_posts())
     @endphp
@@ -63,6 +64,14 @@
           </div>
           <div class="col-sm-4">
             <h3 class="widgetTitle">Últimas preguntas registradas</h3>
+            @if ( $faq_query !== null && $faq_query->have_posts() )
+              <ul class="list-unstyled">
+                  @while($faq_query->have_posts()) @php $faq_query->the_post() @endphp
+                  @include('partials.content-feed')
+                  @endwhile
+              </ul>
+              @php wp_reset_postdata() @endphp
+            @endif
             
           </div>
           <div class="col-sm-4">

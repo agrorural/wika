@@ -12,6 +12,7 @@ if ( ! class_exists( 'Basepress_Utils' ) ) {
 
 	class Basepress_Utils {
 
+		private $kb_slug = null;
 		private $product = null;
 		private $sections = null;
 		private $single_section = null;
@@ -325,6 +326,37 @@ if ( ! class_exists( 'Basepress_Utils' ) ) {
 			return $xml_path;
 		}
 
+
+		/**
+		 * Gets the KB slug including parents pages if exists
+		 *
+		 * @since 1.7.9
+		 *
+		 * @return string
+		 */
+		public function get_kb_slug(){
+
+			if( $this->kb_slug ){
+				return $this->kb_slug;
+			}
+
+			$entry_page = isset( $this->options['entry_page'] ) ? $this->options['entry_page'] : 0;
+
+			/**
+			 * Filters the entry page ID before use
+			 */
+			$entry_page = apply_filters( 'basepress_entry_page', $entry_page );
+
+			$parents = get_ancestors( $entry_page, 'page' );
+			$kb_slug = get_post_field( 'post_name', $entry_page );
+
+			foreach( $parents as $parent ){
+				$parent_slug = get_post_field( 'post_name', $parent );
+				$kb_slug = $parent_slug . '/' . $kb_slug;
+			}
+			$this->kb_slug = $kb_slug;
+			return $kb_slug;
+		}
 
 
 		/**

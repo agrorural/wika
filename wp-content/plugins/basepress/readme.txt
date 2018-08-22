@@ -4,7 +4,7 @@ Donate link: http://8bitsinarow.com
 Tags: knowledge base, help desk,documentation,faq
 Requires at least: 4.5
 Tested up to: 4.9
-Stable tag: 1.8.5
+Stable tag: 1.8.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -136,6 +136,16 @@ Customers of our Premium Version get full support for a year from purchase.
 3. Search bar with Live Results
 
 == Changelog ==
+
+= 1.8.8 =
+* Fixed post order page not showing all articles (Premium Only)
+* Small improvement on admin css
+
+= 1.8.7 =
+* Fixed bug for searches when the KB is in sub-page
+
+= 1.8.6 =
+* Improved search results to move exact matches on top
 
 = 1.8.5 =
 * Removed page builders' shortcodes from search snippets

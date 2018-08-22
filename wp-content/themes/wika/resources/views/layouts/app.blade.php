@@ -19,5 +19,9 @@
     @php do_action('get_footer') @endphp
     @include('partials.footer')
     @php wp_footer() @endphp
+    <aside class="liveSearch" style="display:none">
+        <div class="list-group">
+        </div>
+    </aside>
   </body>
 </html>

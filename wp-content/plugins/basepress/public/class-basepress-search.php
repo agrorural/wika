@@ -90,8 +90,7 @@ if ( ! class_exists( 'Basepress_Search' ) ) {
 		 * @updated 1.4.0
 		 */
 		public function render_searchbar( $product = '' ) {
-			global $wp;
-			global $basepress_utils;
+			global $wp, $basepress_utils;
 
 			if ( ! $product ) {
 				$product = $basepress_utils->get_product();
@@ -100,7 +99,7 @@ if ( ! class_exists( 'Basepress_Search' ) ) {
 
 			$placeholder = isset( $options['search_field_placeholder'] ) ? $options['search_field_placeholder'] : '';
 			$search_terms = isset( $wp->query_vars['s'] ) ? urldecode( $wp->query_vars['s'] ) : '';
-			$kb_slug = isset( $options['entry_page'] ) ? get_post_field( 'post_name', $options['entry_page'] ) : '';
+			$kb_slug = $basepress_utils->get_kb_slug();
 
 			/**
 			 * Filter the kb_slug before generating the action link
@@ -333,7 +332,7 @@ if ( ! class_exists( 'Basepress_Search' ) ) {
 				$terms = urldecode( $wp_query->query['s'] );
 
 				$terms = str_replace( '+', ' ', $terms );
-				$query_pieces = $this->query_pieces( $product, $terms );
+				$query_pieces = $this->query_pieces( $product, $terms, $pieces );
 
 				if ( $query_pieces ) {
 
@@ -367,13 +366,14 @@ if ( ! class_exists( 'Basepress_Search' ) ) {
 		 * Generates the query pieces
 		 *
 		 * @since 1.2.1
-		 * @updated 1.4.0, 1.7.5, 1.7.11, 1.8.1
+		 * @updated 1.4.0, 1.7.5, 1.7.11, 1.8.1, 1.8.6
 		 *
 		 * @param $product
 		 * @param $terms
 		 * @return array|null|object
 		 */
-		private function query_pieces( $product, $terms ) {
+		private function query_pieces( $product, $terms, $pieces = array() ) {
+
 			global $wpdb;
 
 			//Make all terms lowercase
@@ -383,6 +383,10 @@ if ( ! class_exists( 'Basepress_Search' ) ) {
 			else{
 				$terms = strtolower( $terms );
 			}
+
+			//Set exact matches terms before filtering the query
+			$exact_match_terms = $terms;
+
 			//Filter out unwanted terms
 			$terms = $this->filter_terms( $terms );
 
@@ -420,7 +424,7 @@ if ( ! class_exists( 'Basepress_Search' ) ) {
 				}
 
 				$_sections_ids = $wpdb->get_results( $sections_query, ARRAY_A );
-				
+
 				$sections_ids = array();
 
 				foreach( $_sections_ids as $section_id ){
@@ -430,16 +434,46 @@ if ( ! class_exists( 'Basepress_Search' ) ) {
 				$sections_ids = implode( ',', $sections_ids );
 
 				//Prepare matches portion of the query
+				$order_index = 1;
 				$orderby = '';
-				foreach ( $sql_terms as $sql_term ) {
-					$orderby .= " + CASE WHEN $wpdb->posts.post_content LIKE '$sql_term%' THEN 1 ELSE 0 END";
-					$orderby .= " + CASE WHEN $wpdb->posts.post_title LIKE '$sql_term%' THEN 1 ELSE 0 END";
-				}
-				$orderby = ltrim( $orderby, ' + ' );
-				$orderby .= " DESC";
 
+				//Exact matches
+				$orderby .= " WHEN $wpdb->posts.post_title REGEXP '[[:<:]]$exact_match_terms' THEN $order_index";
+				$order_index++;
+				$orderby .= " WHEN $wpdb->posts.post_content REGEXP '[[:<:]]$exact_match_terms' THEN $order_index";
+				$order_index++;
+
+				//AND logic
+				foreach( array( 'title', 'content' ) as $field ){
+					$orderby .= ' WHEN';
+					foreach( $sql_terms as $index => $sql_term ){
+						$sql_term = $sql_term;
+						$orderby .= $index != 0 ? ' AND' : '';
+						$orderby .= " $wpdb->posts.post_$field REGEXP '[[:<:]]$sql_term'";
+					}
+					$orderby .= " THEN $order_index";
+					$order_index++;
+				}
+
+				//OR logic
+				foreach( array( 'title', 'content' ) as $field ){
+					$orderby .= ' WHEN';
+					foreach( $sql_terms as $index => $sql_term ){
+						$sql_term = $sql_term;
+						$orderby .= $index != 0 ? ' OR' : '';
+						$orderby .= " $wpdb->posts.post_$field REGEXP '[[:<:]]$sql_term'";
+					}
+					$orderby .= " THEN $order_index";
+					$order_index++;
+				}
+
+				//Close ORDER BY clause
+				$orderby = '(CASE ' . ltrim( $orderby, ' + ' ) . " ELSE $order_index END)";
+
+				//Join Clause
 				$pieces['join'] = " LEFT JOIN $wpdb->term_relationships AS t ON ($wpdb->posts.ID = t.object_id)";
 
+				//Where Clause
 				$pieces['where'] = " AND t.term_taxonomy_id IN ($sections_ids)";
 				$pieces['where'] .= " AND ( LOWER($wpdb->posts.post_content) REGEXP '$multi_terms' OR LOWER($wpdb->posts.post_title) REGEXP '$multi_terms' )";
 				$pieces['where'] .= " AND $wpdb->posts.post_type = 'knowledgebase'";
@@ -448,9 +482,9 @@ if ( ! class_exists( 'Basepress_Search' ) ) {
 				$pieces['orderby'] = ' ' . $orderby;
 
 				/**
-					* Filter to alter the query pieces for the search query
-					*/
-					$pieces = apply_filters( 'basepress_search_query_pieces', $pieces );
+				 * Filter to alter the query pieces for the search query
+				 */
+				$pieces = apply_filters( 'basepress_search_query_pieces', $pieces );
 
 				$pieces['orderby'] .= ", $wpdb->posts.post_date DESC";
 

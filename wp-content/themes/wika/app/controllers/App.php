@@ -22,8 +22,13 @@ class App extends Controller
             return __('Latest Posts', 'sage');
         }
         if (is_archive()) {
+            // if (is_tax()) {
+            //   return get_the_archive_title();
+            // }
+
             return get_the_archive_title();
         }
+
         if (is_search()) {
             return sprintf(__('Search Results for %s', 'sage'), get_search_query());
         }

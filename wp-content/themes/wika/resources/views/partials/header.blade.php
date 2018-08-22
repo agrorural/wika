@@ -3,17 +3,13 @@
       <div class="container">
           <section class="branding">
             <a class="brand" href="{{ home_url('/') }}">
-              <svg version="1.1" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg id="logo" version="1.1" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 480 134" style="enable-background:new 0 0 480 134;" xml:space="preserve">
-                <style type="text/css">
-                  .st0{fill:#3CCDCD;}
-                  .st1{fill:#AFEBEB;}
-                </style>
-                <g id="lupa">
-                  <path id="mango" class="st0" d="M469.5,127.2L469.5,127.2c-4.1,4.1-10.8,4.1-14.9,0l-23.9-23.8c-4.1-4.1-4.1-10.8,0-14.9v0
+                <g id="glass">
+                  <path id="glassBase" class="st0" d="M469.5,127.2L469.5,127.2c-4.1,4.1-10.8,4.1-14.9,0l-23.9-23.8c-4.1-4.1-4.1-10.8,0-14.9v0
                     c4.1-4.1,10.8-4.1,14.9,0l23.9,23.8C473.6,116.4,473.6,123.1,469.5,127.2z"/>
-                  <circle id="lupa_x5F_02" class="st0" cx="394.4" cy="50.5" r="47.2"/>
-                  <circle id="lupa_x5F_01" class="st1" cx="392.5" cy="46.7" r="38.3"/>
+                  <circle id="glassOuter" class="st0" cx="394.4" cy="50.5" r="47.2"/>
+                  <circle id="glassInner" class="st1" cx="392.5" cy="46.7" r="38.3"/>
                 </g>
                 <g id="name">
                   <g id="text">
