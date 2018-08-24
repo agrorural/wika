@@ -19,6 +19,7 @@
           'post_taxonomy' => array(
             'post'  => 'post_tag', // 'post' post type and 'post_tag' taxonomy
             'faqs'  => 'sistema',    // 'book' post type and 'genre' taxonomy
+            'knowledgebase' => 'knowledgebase_cat',
           ),
           'echo'            => true
         );

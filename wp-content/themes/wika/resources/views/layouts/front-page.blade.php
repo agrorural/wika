@@ -20,11 +20,11 @@
             <div class="card">
                 <i class="fas fa-question"></i>
               <div class="card-body">
-                <h5 class="card-title"><a href="{{ get_permalink( get_page_by_path( 'preguntas-frecuentes' ) ) }}">Preguntas Frecuentes</a></h5>
+                <h5 class="card-title"><a href="{{ get_post_type_archive_link( 'faq' ) }}">Preguntas Frecuentes</a></h5>
                 <p class="card-text">Aquí verá las soluciones más simples a los problemas más comunes en TI.</p>
               </div>
               <div class="card-footer">
-                <a class="btn btn-link" href="{{ get_permalink( get_page_by_path( 'preguntas-frecuentes' ) ) }}">Ver recurso</a>
+                <a class="btn btn-link" href="{{ get_post_type_archive_link( 'faq' ) }}">Ver recurso</a>
               </div>
             </div>
             <div class="card">

@@ -22,8 +22,9 @@ class App extends Controller
             return __('Latest Posts', 'sage');
         }
         if (is_archive()) {
-            // if (is_tax()) {
+            // if (is_tax('knowledgebase_cat')) {
             //   return get_the_archive_title();
+            //   //return post_type_archive_title();
             // }
 
             return get_the_archive_title();

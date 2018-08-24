@@ -12,6 +12,15 @@ function wika_image_shortcode($atts) {
 add_shortcode('image', __NAMESPACE__ . '\\wika_image_shortcode');
 add_filter('widget_text', 'do_shortcode');
 
+
+add_filter( 'get_the_archive_title', function ($title) {
+  if ( is_tax('knowledgebase_cat') ) {
+    $title = single_cat_title( '', false );
+  } 
+
+  return $title;
+});
+
 /**
  * Ajax para Onmisearch
  */

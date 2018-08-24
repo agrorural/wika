@@ -25,6 +25,7 @@ export default {
     let customPostTitle = '';
     let theHtml = '';
     var cboPostType = $("#cboPostType");
+    let brokenLink = $('a[href*="%taxonomies%"]').parent();
 
     let objectToSend = {
       action: 'ajax_omni_search',
@@ -191,7 +192,15 @@ export default {
     }
 
     $(document).ready(function() {
-      //listResults(objectToSend);
+      if( brokenLink.length === 1 ) {
+        brokenLink.remove();
+        // brokenLink.text("Wiki");
+        // brokenLink.attr('href',function(_,v){
+        //     return v.replace('%taxonomies%/','');
+        // });
+
+        // console.log(brokenLink);
+      }
 
       backspaceTrigger.click(function(e){
         e.preventDefault();

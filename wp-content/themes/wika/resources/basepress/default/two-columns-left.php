@@ -12,7 +12,6 @@ get_header( 'basepress' );
 <div class="bpress-wrap">
 	
 	<div class="bpress-content-area bpress-float-right">
-		
     <!-- Product title -->
     <?php /*
 		<header class="bpress-main-header">
