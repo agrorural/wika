@@ -54,7 +54,7 @@
           <div class="col-sm-4">
             <h3 class="widgetTitle">Últimas entradas en la Wiki</h3>
             @if ( $kb_query !== null && $kb_query->have_posts() )
-              <ul class="list-unstyled">
+              <ul class="feed">
                   @while($kb_query->have_posts()) @php $kb_query->the_post() @endphp
                   @include('partials.content-feed')
                   @endwhile
@@ -65,7 +65,7 @@
           <div class="col-sm-4">
             <h3 class="widgetTitle">Últimas preguntas registradas</h3>
             @if ( $faq_query !== null && $faq_query->have_posts() )
-              <ul class="list-unstyled">
+              <ul class="feed">
                   @while($faq_query->have_posts()) @php $faq_query->the_post() @endphp
                   @include('partials.content-feed')
                   @endwhile
@@ -77,7 +77,7 @@
           <div class="col-sm-4">
             <h3 class="widgetTitle">Últimas entradas en los foros</h3>
             @if ( $bbp_query !== null && $bbp_query->have_posts() )
-              <ul class="list-unstyled">
+              <ul class="feed">
                   @while($bbp_query->have_posts()) @php $bbp_query->the_post() @endphp
                   @include('partials.content-feed')
                   @endwhile

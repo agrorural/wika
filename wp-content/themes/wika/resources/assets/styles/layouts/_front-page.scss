@@ -1,25 +1,101 @@
-#feed {
-  background-color: rgba($secondary, 0.1);
-
+.section {
   .widgetTitle {
     margin-bottom: 1.5rem;
-  }
-
-  a {
-    @include font-family();
-
-    font-size: 16px;
-    // transition: color 2s ease;
-    color: rgba(0, 0, 0, 0.85);
-
-    &:hover {
-      color: $primary;
-    }
   }
 
   .updated {
     color: rgba(0, 0, 0, 0.5);
   }
+
+  ul {
+    @extend .list-unstyled;
+
+    li {
+      margin-bottom: 0.75rem;
+
+      a {
+        display: flex;
+        justify-content: start;
+        width: 100%;
+        align-items: center;
+
+        figure {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 48px;
+          height: 48px;
+          background-color: rgba($primary, 0.05);
+          border: 1px solid rgba($primary, 0.1);
+          margin: 0;
+          padding: 0;
+          transition: background-color 0.3s ease-in-out, border 0.1s ease-in-out;
+
+          &::before {
+            display: none;
+          }
+        }
+
+        .feed-body {
+          margin-left: 1rem;
+          width: calc(100% - 48px);
+        }
+
+        h5 {
+          @include font-family();
+
+          font-size: 16px;
+          color: rgba(0, 0, 0, 0.85);
+        }
+
+        &:hover {
+          figure {
+            background-color: rgba($primary, 0.95);
+            border: 1px solid rgba($primary, 0.95);
+            color: white;
+          }
+
+          h5 {
+            color: $primary;
+          }
+        }
+      }
+
+      &.knowledgebase {
+        a {
+          figure::before {
+            font-family: 'Font Awesome 5 Solid', sans-serif;
+            font-weight: 900;
+            content: "\f002";
+          }
+        }
+      }
+
+      &.faq {
+        a {
+          figure::before {
+            font-family: 'Font Awesome 5 Solid', sans-serif;
+            font-weight: 900;
+            content: "\f128";
+          }
+        }
+      }
+
+      &.forum {
+        a {
+          figure::before {
+            font-family: 'Font Awesome 5 Regular', sans-serif;
+            font-weight: 400;
+            content: "\f27a";
+          }
+        }
+      }
+    }
+  }
+}
+
+#feed {
+  background-color: rgba($secondary, 0.1);
 }
 
 #deckInfo {
@@ -38,10 +114,6 @@
         background-color: rgba($primary, 75);
         color: white;
       }
-    }
-
-    h5 > a {
-      color: #515151;
     }
 
     svg {
